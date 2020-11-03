@@ -1,6 +1,6 @@
 # Playing Games for "Research Purposes"
 
-<img src="https://www.notion.so/Playing-Games-for-Research-Purposes-dc2fd6a3ba764b5e834ea1687bdb3939#f3117a50bde54940bff55602d32952a6">
+<img src=htps://media.discordapp.net/attachments/702963059764887656/773221328115335198/https3A2F2Fs3-us-west-2.png?width=782&height=499">
 
 This repo contains our work for the CS1.301 Project.
 
