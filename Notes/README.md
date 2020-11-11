@@ -1,14 +1,14 @@
-> Gaming is Hard, but someone must ~~do~~ prove it.
+> *"Gaming is Hard, but someone must ~~do~~ prove it."*
 >
-> -- a plagiarised quote demossed by Kunwar
+> a plagiarised quote demossed by Kunwar
 
-> If ~~people~~ Alapan stopped worrying about who gets the credit for the work then, the ~~world~~ team would be a much better place.
+> *"If ~~people~~ Alapan stopped worrying about who gets the credit for the work then, the ~~world~~ team would be a much better place."*
 >
-> -- ancient anime proverb
+> an ancient anime proverb
 
-> Mazdoori karwayenge
+> *"Mazdoori karwayenge"*
 > 
-> -- ~~the Almighty~~ Zeeshan
+> by  ~~the Almighty~~ Zeeshan
 
 ## Structure of the Project
 
