@@ -2,7 +2,7 @@
 layout: post
 title:  "Final Proposal"
 date:   2020-9-11 22:07:48 +0530
-categories: jekyll update
+categories: Proposal
 ---
 
 # Playing Games for "Research Purposes" - Final Proposal
