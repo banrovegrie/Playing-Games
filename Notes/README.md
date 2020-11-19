@@ -28,11 +28,11 @@
 
 - Why Games?
 - Game Theory
-- Classification of Combinatorial Games
-- Classification of Board Games
+- ~~Classification of Combinatorial Games~~ (?)
+- ~~Classification of Board Games~~ (?)
 - Video Games and Classification
-- Examples
 - Theorems on Video Games
+- Analysis of Video Game Design
 - Generalisations
 
 ### Part III: 
