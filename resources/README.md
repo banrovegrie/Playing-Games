@@ -2,7 +2,7 @@
 
 1. Sipser: Introduction to Turing Machines with Automata Theory
 2. Barak and Arora: Complexity Classes and Reduction Proofs (Turing/Cook and Karp)
-3. Computationally Hard Nintendo Games by Eric Demaine
+3. Motivation: Computationally Hard Nintendo Games by Eric Demaine
 
 ## References
 
