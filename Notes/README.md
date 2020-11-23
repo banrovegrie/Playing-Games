@@ -27,7 +27,8 @@
 ### Part II: 
 
 - Why Games?
-- Game Theory
+- Game Theoretic Formalism
+- Constraint Logic Formalism
 - ~~Classification of Combinatorial Games~~ (?)
 - ~~Classification of Board Games~~ (?)
 - Video Games and Classification
