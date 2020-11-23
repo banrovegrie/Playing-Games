@@ -99,18 +99,29 @@ The collection of strings that M accepts is the language of M, denoted as L(M). 
 
 ## Robustness of the Turing Machines
 
-The equivalency of Turing Machines with respect to the power i.e the ability to solve problems stays same for a lot of variance in the design. This property is referred to as **robustness**. The turing machine is remarkably robust. There are many variation on the definition of a Turing machine. Eg, Change in Tape alphabet, Multitape TM, Multiple heads TM, Non-deterministic TM, etc. But they all have equivalent power, i,e. they recognize same class of languages. To show that two kinds of machines are equivalent, we show how to simulate the behavior of one using the other.
+The equivalency of Turing Machines with respect to the power i.e the ability to solve problems stays same for a lot of variance in the design. This property is referred to as **robustness**. The turing machine is remarkably robust. There are many variation on the definition of a Turing machine. Eg, Change in Tape alphabet, Multitape TM, Multiple heads TM, Non-deterministic TM, etc. But they all have equivalent power, i,e. they recognize same class of languages. To show that two kinds of machines are equivalent, we show how to simulate the behavior of one using the other as shown below.
 
+### k tape to 1 tape
+
+We can design a machine(A) with k tapes ,each tape with one head. Where the input will come on first tape and all the tapes can be used for computation.The transition functoin of this machine will look like: 
+$\delta : Q \times \Gamma^k \rightarrow Q \times \Gamma^k \times \{L, R\}^k$
+It might seems that this machine is more powerful than our original machine i.e, can recognize a greater set of language. But we can show that it is equivalent to our original 1 tape machine(B) by simulating it on that in the given way.
+
+* Store the information of all the k tapes on a single tape seprated by **#**.
+* Mark the location of each tape head of the k-tape machine using dotted symbol on our sigle tape. this could be thought of as virtual heads.
+* To simulate one move of A, B moves its head left to right from the first **#** to the last **#** to get the symbols under the dotted positions.
+* Then A makes another pass to update then according to the transition function of A.
+* If B ends up in a # it repaces it with blank symbol and shifts the tape contents one unit to the right and then continues the computation.
+ 
 ## Universal Turing Machines
 
 ---
 
-universal Turing machine (UTM) is a Turing machine that simulates an arbitrary Turing machine on arbitrary input. The universal machine essentially achieves this by reading both the description of the machine to be simulated as well as the input to that machine from its own tape.
+Universal Turing machine is a Turing machine that simulates an arbitrary Turing machine on arbitrary input. The universal machine essentially achieves this by reading both the description of the machine to be simulated as well as the input to that machine from its own tape. The UTM can also take itself as the input and this thing lead us to the halting problem. 
 
 
 # Church Turing Thesis
 
 ---
 
-The Church-Turing thesis tells us that all effective models of computation are no more
-powerful than a Turing machine. The Church-Tur­ing the­sis has not and can not be proven. The only way to know that every compu­ta­tion can be expressed in some lan­guage is to know what every compu­ta­tion is. But it is almost uni­ver­sally believed. We’ve found myr­iad ways of describ­ing compu­ta­tions and all of them have been reducible to Tur­ing machi­nes. We have no evi­dence that any more pow­erful means of describ­ing processes exists.
+The Church-Turing thesis tells us that all effective models of computation are no more powerful than a Turing machine. The Church-Tur­ing the­sis has not and can not be proven. The only way to know that every compu­ta­tion can be expressed in some lan­guage is to know what every compu­ta­tion is. But it is almost uni­ver­sally believed. We’ve found myr­iad ways of describ­ing compu­ta­tions and all of them have been reducible to Tur­ing machi­nes. We have no evi­dence that any more pow­erful means of describ­ing processes exists.    
