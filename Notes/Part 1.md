@@ -77,41 +77,51 @@ $q_{halt}$ is the halt state, when a Turing Machine reaches this state it halts 
 ## Working of a Turing Machine
 
 ---
+A Turing machine $M = (Q, \Sigma, \Gamma, \delta, q_{0}, q_{accept}, q_{reject})$ computes as follows. Initially, M receives its input $w = w_1w_2...w_n \in \Sigma^∗$ on the leftmost n squares of the tape, and the rest of the tape is blank. The head starts on the leftmost square of the tape. The computation proceeds according to the rules described by the transition function. 
 
-Turing Machine starts at the start state with its tape having the input and the rest of the tape filled with $\Box$. Based on the transition function, it moves its head, changes the states after reading/writing onto the tape(s).
+The **transition function** as described earlier are functions that take the current state and the symbol below the tape's head as the input. The output is the symbol written back onto the tape, the new state of the machine, and the direction of movement of the head.
 
-At the end, if it halts it has the halt state and the output is written on the output tape.
+The computation continues until it enters either the accept or reject states, at which point it halts. If neither occurs, M goes on forever.
 
-### Transition function
+As a Turing machine computes, changes occur in the current state, the current tape contents, and the current head location. A setting of these three items is called a **configuration** of the Turing machine. The configuration can be represented as $uqv$, where $q$ if the current state, the current tape contents is $uv$ and the head locatoin is the first symbol of $v$.We say that configuration $C_1$ yields configuration $C_2$ if the Turing machine can legally go from $C_1$ to $C_2$ in a single step.
 
-The transition function as described earlier are functions that take the current state and the symbol below the tape's head as the input. The output is the symbol written back onto the tape, the new state of the machine, and the direction of movement of the head.
+The **start configuration** of $M$ on input $w$ is the configuration $q_0w$, which
+indicates that the machine is in the start state q0 with its head at the leftmost
+position on the tape. In an **accepting configuration**, the state of the configuration is $q_{accept}$. In a **rejecting configuration**, the state of the configuration is $q_{reject}$.
 
-**(more description needed here)**
+A Turing machine M accepts input w if a sequence of
+configurations $C_1, C_2,..., C_k$ exists, where
+1. $C_1$ is the start configuration of M on input w,
+2. each $C_i$ yields $C_{i+1}$ , and
+3. $C_k$ is an accepting configuration.
+
+The collection of strings that M accepts is the language of M, denoted as L(M). We call a language Turing-recognizable if some Turing machine recognizes it.
 
 ## Robustness of the Turing Machines
 
-The equivalency of Turing Machines with respect to the power i.e the ability to solve problems stays same for a lot of variance in the design. This property is referred to as robustness.
+The equivalency of Turing Machines with respect to the power i.e the ability to solve problems stays same for a lot of variance in the design. This property is referred to as **robustness**. The turing machine is remarkably robust. There are many variation on the definition of a Turing machine. Eg, Change in Tape alphabet, Multitape TM, Multiple heads TM, Non-deterministic TM, etc. But they all have equivalent power, i,e. they recognize same class of languages. To show that two kinds of machines are equivalent, we show how to simulate the behavior of one using the other as shown below.
 
-### Change in Tape alphabet
+### k tape to 1 tape
 
----
+We can design a machine(A) with k tapes ,each tape with one head. Where the input will come on first tape and all the tapes can be used for computation.The transition functoin of this machine will look like: 
+$\delta : Q \times \Gamma^k \rightarrow Q \times \Gamma^k \times \{L, R\}^k$
+It might seems that this machine is more powerful than our original machine i.e, can recognize a greater set of language. But we can show that it is equivalent to our original 1 tape machine(B) by simulating it on that in the given way.
 
-**(to be filled)**
-
-### k Tape to 1 Tape
-
----
-
-**(to be filled)**
-
+* Store the information of all the k tapes on a single tape seprated by **#**.
+* Mark the location of each tape head of the k-tape machine using dotted symbol on our sigle tape. this could be thought of as virtual heads.
+* To simulate one move of A, B moves its head left to right from the first **#** to the last **#** to get the symbols under the dotted positions.
+* Then A makes another pass to update then according to the transition function of A.
+* If B ends up in a # it repaces it with blank symbol and shifts the tape contents one unit to the right and then continues the computation.
+ 
 ## Universal Turing Machines
 
 ---
 
-**(to be filled)**
+Universal Turing machine is a Turing machine that simulates an arbitrary Turing machine on arbitrary input. The universal machine essentially achieves this by reading both the description of the machine to be simulated as well as the input to that machine from its own tape. The UTM can also take itself as the input and this thing lead us to the halting problem. 
+
 
 # Church Turing Thesis
 
 ---
 
-**(to be filled)**
+The Church-Turing thesis tells us that all effective models of computation are no more powerful than a Turing machine. The Church-Tur­ing the­sis has not and can not be proven. The only way to know that every compu­ta­tion can be expressed in some lan­guage is to know what every compu­ta­tion is. But it is almost uni­ver­sally believed. We’ve found myr­iad ways of describ­ing compu­ta­tions and all of them have been reducible to Tur­ing machi­nes. We have no evi­dence that any more pow­erful means of describ­ing processes exists.    
