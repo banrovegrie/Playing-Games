@@ -1,3 +1,5 @@
+[Notion Repo :)](https://www.notion.so/Algorithms-Project-e4abd7585a864f2b8bbffb71909e5c5e)
+
 > *"Gaming is Hard, but someone must ~~do~~ prove it."*
 >
 > a plagiarised quote demossed by Kunwar
@@ -10,7 +12,7 @@
 > 
 > by  ~~the Almighty~~ Zeeshan
 
-## Structure of the Project
+## Structure of the Project ??
 
 ### Part I: 
 
